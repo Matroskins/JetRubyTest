@@ -65,8 +65,7 @@ function SquareArray(colorArrayArg) {
 }
 
 function changeSquareArray(squareArray, setSquareArray, id) {
-  const elementIndex = findIndex(squareArray, (element) => { return id === element.id; });
-debugger; 
+  const elementIndex = findIndex(squareArray, (element) => { return id === element.id; }); 
   const changedSquareObject = Object.assign(
     {},
     squareArray[elementIndex],
@@ -103,7 +102,6 @@ const enhance = compose(
             props.setRound(newRound); 
             props.setSelectedElementColor('');
             changeSquareArray(props.squareArray, props.setSquareArray, id);
-            debugger; 
             changeSquareArray(props.squareArray, props.setSquareArray, props.selectedElementId);
             props.setSelectedElementId(0);
           }, 1000);
